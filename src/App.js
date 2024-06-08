@@ -1,21 +1,25 @@
 // import logo from './logo.svg';/
 import './App.css';
-import Home from './Comaponents/Home/Home';
-import Navbar from './Comaponents/Navbar/Navbar';
-import Footer from './Comaponents/Footer/Footer';
 import Header from './Comaponents/Header/Header';
+import Home from './Comaponents/Home/Home';
+import Footer from './Comaponents/Footer/Footer';
 import Login from './Comaponents/Login/Login';
+
 
 
 
 function App() {
   return (
     <>
-      <Header></Header> 
+      {/* <Header></Header> 
       <Navbar></Navbar>
        <Home/>
       <Footer></Footer>
-      <Login></Login>
+      <Login></Login> */}
+      <Header></Header>
+      <Home></Home>
+      <Footer></Footer>
+      {/* <Login></Login> */}
     </>
   );
 }
