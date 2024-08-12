@@ -667,8 +667,8 @@ const CustomDiv = ({ image, data, title, describe, link }) => (
       </section>
 
       <section className="home-four py-5">
-        <div className="c container-xxl">
-          <div className="r row">
+        <div className="c container-xxl overflow-hidden">
+          <div className="r row overflow-hidden">
             <h4 className="mb-2">Our Latest News</h4>
           <Slider {...subSliderBlog} className="">
                 {LastNewsPanner.map((LastNewsPanner, index) => (

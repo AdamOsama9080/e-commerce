@@ -4,6 +4,7 @@ import Header from './Comaponents/Header/Header';
 import Home from './Comaponents/Home/Home';
 import Footer from './Comaponents/Footer/Footer';
 import Login from './Comaponents/Login/Login';
+import Register from './Comaponents/Register/Register';
 
 
 
@@ -11,14 +12,15 @@ import Login from './Comaponents/Login/Login';
 function App() {
   return (
     <>
-      {/* <Header></Header> 
-      <Navbar></Navbar>
-       <Home/>
+      <Header></Header> 
+      {/* <Navbar></Navbar> */}
+      <Register></Register>
+       {/* <Home/> */}
       <Footer></Footer>
-      <Login></Login> */}
-      <Header></Header>
+      {/* <Login></Login> */}
+      {/* <Header></Header>
       <Home></Home>
-      <Footer></Footer>
+      <Footer></Footer> */}
       {/* <Login></Login> */}
     </>
   );

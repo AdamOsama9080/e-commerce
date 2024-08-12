@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 // import ReactFlagsSelect from 'react-flags-select';
 import "flag-icons/css/flag-icons.min.css";
-
-
+import { hover } from '@testing-library/user-event/dist/hover';
+import { colors } from '../../Colors';
 
 export default function Header() {
+    const [hovered, setHovered] = useState(null);
+
+    const handleMouseEnter = (index) => {
+      setHovered(index);
+    };
+  
+    const handleMouseLeave = () => {
+      setHovered(null);
+    };
+  
+    const menuItems = [
+        { name: 'CameraS & videos', showIcon: true },
+        { name: 'Computer & laptop', showIcon: true },
+        { name: 'Home Appliances', showIcon: false },
+        { name: 'Top Offers', showIcon: false },
+        { name: 'Mobiles & tablets', showIcon: false },
+        { name: 'Smart Phones', showIcon: false },
+        { name: 'Computer & laptop', showIcon: true },
+        { name: 'Smart phones', showIcon: false },
+        { name: 'Smart Telelvisons', showIcon: false },
+        { name: 'Music & Gaming', showIcon: false },
+        { name: 'portable speakers', showIcon: false },
+        { name: 'headphones', showIcon: false },
+      ];
+      
   return (
     <>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"></link>
@@ -119,10 +144,27 @@ export default function Header() {
                                         <i className="fa-brands fa-shopify fa-lg"></i>
                                         <span className='d-inline-block me-5'>Shop Categouries</span>
                                     </button>
-                                    <ul className="dropdown-menu bg-black w-100">
-                                        <li><Link className="dropdown-item text-white p-3 mb-1" to="/">Action</Link></li>
-                                        <li><Link className="dropdown-item text-white p-3 mb-1" to="/">Another action</Link></li>
-                                        <li><Link className="dropdown-item text-white p-3 mb-1 border-0" to="/">Something else here</Link></li>
+                                    <ul className='dropdown-menu bg-black w-100'>
+                                        {menuItems.map((item, index) => (
+                                            <li key={index} style={{backgroundColor:hovered === index ? colors.header: 'transparent',
+                                            }}>
+                                            <Link
+                                                className='text-capitalize p-3 mb-1 d-flex justify-content-between align-items-center'
+                                                style={{
+                                                color:
+                                                    hovered === index ? colors.secondary : 'white',
+                                                }}
+                                                onMouseEnter={() => handleMouseEnter(index)}
+                                                onMouseLeave={handleMouseLeave}
+                                                to='/'
+                                            >
+                                                {item.name}
+                                                {item.showIcon && (
+                                                    <i className='fa-solid fa-angle-right  px-3'></i>
+                                                )}
+                                            </Link>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
@@ -132,6 +174,51 @@ export default function Header() {
                                     <NavLink className="text-white" to='/'>Our store</NavLink>
                                     <NavLink className="text-white" to='/'>Blogs</NavLink>
                                     <NavLink className="text-white" to='/'>Contacts</NavLink>
+                                </div>
+                            </div>
+
+                            {/* <div className='card flex-row p-3'>
+                                <div className='card-body mx-3'>
+                                    <h5 className='card-title'>AirBods</h5>
+                                    <ul className='list-unstyled'>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>Camera & Videos</li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>headohones</li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>i pads </li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>porable speakers</li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>smart phones</li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>mini speakers</li>
+                                        <li className='text-capitalize text-black fs-6 py-2 '>wired earbuds</li>
+                                    </ul>
+                                </div>
+                                <div className='card-body mx-3'>
+                                    <h5 className='card-title'>AirBods</h5>
+                                    <ul className='list-unstyled'>
+                                        <li className='text-capitalize text-black fs-6 py-2'>airpodes</li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>smartwatches</li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>TVs </li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>phones </li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>speaker</li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>head phones</li>
+                                        <li className='text-capitalize text-black fs-6 py-2'>smart phones</li>
+                                    </ul>
+                                </div>
+                            </div> */}
+
+                            <div className='card flex-row p-3'>
+                                <div className='card-body border-end'>
+                                    <img src="./images/logo.png" alt="logo"/>
+                                    <p className='text-center fw-bold'>Apple Airpodes </p>
+                                    <p className='fw-bold text-center'>122.00$</p>
+                                </div>
+                                <div className='card-body border-end'>
+                                    <img src="./images/logo.png" alt="logo"/>
+                                    <p className='text-center fw-bold'>Sony Extra B </p>
+                                    <p className='fw-bold text-center'>122.00$</p>
+                                </div>
+                                <div className='card-body'>
+                                    <img src="./images/logo.png" alt="logo"/>
+                                    <p className='text-center fw-bold'>Apple IPhone </p>
+                                    <p className='fw-bold text-center'>122.00$</p>
                                 </div>
                             </div>
                         </div>
