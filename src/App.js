@@ -14,10 +14,10 @@ function App() {
     <>
       <Header></Header> 
       {/* <Navbar></Navbar> */}
-      <Register></Register>
+      {/* <Register></Register> */}
        {/* <Home/> */}
+      <Login></Login>
       <Footer></Footer>
-      {/* <Login></Login> */}
       {/* <Header></Header>
       <Home></Home>
       <Footer></Footer> */}

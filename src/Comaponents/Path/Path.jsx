@@ -5,7 +5,7 @@ import Register from './../Register/Register';
 export default function Path() {
   return (
     <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white py-3">
         <div className="container-fluid d-flex justify-content-center">
             <div className="d-flex align-items-center">
             {/* Navbar content */}
