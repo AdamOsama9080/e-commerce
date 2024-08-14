@@ -6,6 +6,7 @@ import Footer from './Comaponents/Footer/Footer';
 import Login from './Comaponents/Login/Login';
 import Register from './Comaponents/Register/Register';
 import ForggetenPassword from './Comaponents/ForgettonPassword/ForggetenPassword';
+import MyAccount from './Comaponents/MyAccount/MyAccount';
 
 
 
@@ -18,7 +19,8 @@ function App() {
       {/* <Register></Register> */}
        {/* <Home/> */}
       {/* <Login></Login> */}
-      <ForggetenPassword></ForggetenPassword>
+      {/* <ForggetenPassword></ForggetenPassword> */}
+      <MyAccount></MyAccount>
       <Footer></Footer>
       {/* <Header></Header>
       <Home></Home>

@@ -1,4 +1,4 @@
-.main-amazone-btn {  /* Updated to match the class name in the HTML */
+.main-amazone-btn { 
     background-color: #232f3e;
     color: white;
     padding: 5px 20px;
@@ -16,7 +16,7 @@
     color: black;
 }
 
-.secondery-amazone-btn { /* Updated to match the class name in the HTML */
+.secondery-amazone-btn { 
     background-color: #febd69;
     color: black;
     padding: 5px 20px;
@@ -33,3 +33,14 @@
     background-color: #232f3e;
     color: white;
 }
+
+.li-link-style{
+    text-decoration: none;
+    transition: color 0.5s;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.li-link-style:hover{
+    color: black;
+}
+
