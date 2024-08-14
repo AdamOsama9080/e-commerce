@@ -1,0 +1,35 @@
+.main-amazone-btn {  /* Updated to match the class name in the HTML */
+    background-color: #232f3e;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+    border: none;
+}
+
+.main-amazone-btn:hover {
+    background-color: #febd69;
+    color: black;
+}
+
+.secondery-amazone-btn { /* Updated to match the class name in the HTML */
+    background-color: #febd69;
+    color: black;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+    border: none;
+}
+
+.secondery-amazone-btn:hover {
+    background-color: #232f3e;
+    color: white;
+}

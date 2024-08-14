@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ReCAPTCHA from "react-google-recaptcha";
 import { colors } from '../../Colors';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -22,6 +21,7 @@ const validationSchema = Yup.object().shape({
 export default function Register() {
   const [isHovered, setIsHovered] = useState(false);
   const [islinkHovered, setIslinkHovered] = useState(false);
+  const [isContinousHovered, setIsContinousHovered] = useState(false);
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function Register() {
 
                       <div className='row'>
                         <div className='d-flex justify-content-start align-items-center my-2'>
-                          <button type="submit" className="btn btn-dark fw-bold rounded-5 py-1 px-4 border-0" style={{ backgroundColor: isHovered ? colors.secondary : "black", color: isHovered ? "black" : "white" }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>Continue</button>
+                          <button type="submit" className="btn btn-dark fw-bold rounded-5 py-1 px-4 border-0" style={{ backgroundColor: isContinousHovered ? colors.secondary : "black", color: isContinousHovered ? "black" : "white" }} onMouseEnter={() => setIsContinousHovered(true)} onMouseLeave={() => setIsContinousHovered(false)}>Continue</button>
                         </div>
                       </div>
                     </div>
@@ -116,7 +116,7 @@ export default function Register() {
                             <div className='row'>
                               <div className='d-flex justify-content-between'>
                                 <button type="submit" className="btn btn-dark fw-bold rounded-5 py-1 px-4 border-0" style={{ backgroundColor: isHovered ? colors.secondary : "black", color: isHovered ? "black" : "white" }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>Log in</button>
-                                <Link className='text-decoration-none text-black-50' >forggeten password</Link>
+                                <Link className='text-decoration-none' style={{ color: islinkHovered ?  "black" : "rgba(0, 0, 0, 0.5)" }} onMouseEnter={() => setIslinkHovered(true)} onMouseLeave={() => setIslinkHovered(false)} >forggeten password</Link>
                               </div>
                             </div>
                           </Form>
