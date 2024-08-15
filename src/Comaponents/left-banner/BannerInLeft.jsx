@@ -40,12 +40,11 @@ export default function BannerInLeft() {
     </div>
 
     <div className='card my-4 p-0'>
-      <div className='card-body shadow p-0 position-relative border-4'>
+      <div className='card-body shadow p-0  border-4'>
         <img className='w-100 border-4' src={airpodImg} alt="airpodImg" />
-
-        <div className='my-4 position-absolute top-0' style={{ left: '10%' }}>
-          <div className='card-title  fs-5 text-uppercase text-white text-center'>flat 15% off</div>
-          <div className='card-title fw-bold fs-3 text-white text-center text-uppercase'>mobile accessories</div>
+        <div className='my-4 position-absolute top-0' style={{left: '10%'}}>
+          <div className='card-title  fs-6 text-uppercase text-white text-center'>flat 15% off</div>
+          <div className='card-title fw-bold fs-5 text-white text-center text-uppercase'>mobile accessories</div>
         </div>
 
       </div>

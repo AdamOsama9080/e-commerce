@@ -7,6 +7,8 @@ import Login from './Comaponents/Login/Login';
 import Register from './Comaponents/Register/Register';
 import ForggetenPassword from './Comaponents/ForgettonPassword/ForggetenPassword';
 import MyAccount from './Comaponents/MyAccount/MyAccount';
+import AddressBook from './Comaponents/Address Book/AddressBook';
+import Wishlists from './Comaponents/WishLists/Wishlists';
 
 
 
@@ -20,7 +22,9 @@ function App() {
        {/* <Home/> */}
       {/* <Login></Login> */}
       {/* <ForggetenPassword></ForggetenPassword> */}
-      <MyAccount></MyAccount>
+      {/* <MyAccount></MyAccount> */}
+      {/* <AddressBook></AddressBook> */}
+      <Wishlists></Wishlists>
       <Footer></Footer>
       {/* <Header></Header>
       <Home></Home>
