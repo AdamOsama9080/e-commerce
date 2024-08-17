@@ -15,6 +15,7 @@ import RecurringPayments from './Comaponents/Recurring Payments/RecurringPayment
 import RewardPoints from './Comaponents/RewardPoints/RewardPoints';
 import ProductReturns from './Comaponents/Product Returns/ProductReturns';
 import Transactions from './Comaponents/Transactions/Transactions';
+import Newsletter from './Comaponents/Newsletter Subscription/Newsletter';
 
 
 
@@ -36,7 +37,8 @@ function App() {
       {/* <RecurringPayments></RecurringPayments> */}
       {/* <RewardPoints></RewardPoints> */}
       {/* <ProductReturns></ProductReturns> */}
-      <Transactions></Transactions>
+      {/* <Transactions></Transactions> */}
+      <Newsletter></Newsletter>
       <Footer></Footer>
       {/* <Header></Header>
       <Home></Home>

@@ -20,7 +20,7 @@ export default function BannerInLeft() {
       <div className='card-body shadow'>
         <div className='card-title fw-bold fs-5'>Account</div>
         <ul className='list-unstyled'>
-          {['login', 'register', 'forgetten password', 'my account', 'address book', 'wish list', 'order history', 'downloads', 'recurring payments', 'reward points', 'returns', 'transactions', 'newsletter'].map((item, index) => (
+          {['login', 'register', 'forgetten password', 'my account', 'address book', 'wish list', 'order history', 'downloads', 'recurring payments', 'reward points', 'returns', 'transactions', 'newsletter', 'logout'].map((item, index) => (
             <li key={index}>
               <Link
                 className='text-capitalize fs-6 user-select-none'
